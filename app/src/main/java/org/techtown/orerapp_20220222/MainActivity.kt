@@ -27,5 +27,7 @@ class MainActivity : AppCompatActivity() {
         mainViewPager.adapter = mAdapter                            //mainViewPager 어댑터 연결
 
         mainTapLayout.setupWithViewPager(mainViewPager)             // TapLayout ViewPager 연결
+
+        // 도전과제 - 치킨 가게 목록 추가시에는 offScreenLimit = 3 설정 해줘야 정상 동작.
     }
 }
