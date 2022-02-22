@@ -15,4 +15,11 @@ class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             else -> MyProfileFagment()
         }
     }
+
+    override fun getPageTitle(position: Int): CharSequence? {       // 탭 레이아웃 제목 설정
+        return when(position){
+            0 -> "피자 주문"
+            else -> "내 정보 설정"
+        }
+    }
 }
