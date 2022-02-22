@@ -37,7 +37,11 @@ class PizzaStoreListFragment : Fragment () {
     fun setupEvents(){
 
         pizzaStoreListView.setOnItemClickListener { parent, view, position, id ->
+
+            val clickStore = mPizzaStoreList[position]
+
             val myIntent = Intent(requireContext(),ViewStoreDetailActivity::class.java)        //액티비티가 아니기때문에 requireContext
+            myIntent.putExtra("store",clickStore)                                       // putExtra 담길 class 는 Serializable 상속 받아야함.
             startActivity(myIntent)
         }
 
