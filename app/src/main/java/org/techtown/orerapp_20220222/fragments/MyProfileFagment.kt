@@ -1,5 +1,6 @@
 package org.techtown.orerapp_20220222.fragments
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -43,6 +44,18 @@ class MyProfileFagment : Fragment () {
     }
 
     fun setValues(){
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(requestCode == REQ_CODE_NICKNAME){
+            if(requestCode == Activity.RESULT_OK) {
+                val nickname = data!!.getStringExtra("nick")
+                txtNickname.text = nickname
+            }
+        }
 
     }
 
