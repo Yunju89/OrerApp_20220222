@@ -57,7 +57,7 @@ class ViewStoreDetailActivity : AppCompatActivity() {
 
     fun setValues(){
 
-        Glide.with(this).load(mStoreData.logoImageUrl).into(imgLogo)
+        Glide.with(this).load(mStoreData.logoImageUrl).into(imgLogo)      // 이부분 뭘 잘못하면 앱죽는다고함.
 
         txtStoreName.text = mStoreData.name
         txtPhoneNum.text = mStoreData.PhoneNum
