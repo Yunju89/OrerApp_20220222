@@ -26,5 +26,6 @@ class MainActivity : AppCompatActivity() {
         mAdapter = MainViewPagerAdapter(supportFragmentManager)      //프래그먼트매니저 받는
         mainViewPager.adapter = mAdapter                            //mainViewPager 어댑터 연결
 
+        mainTapLayout.setupWithViewPager(mainViewPager)             // TapLayout ViewPager 연결
     }
 }
