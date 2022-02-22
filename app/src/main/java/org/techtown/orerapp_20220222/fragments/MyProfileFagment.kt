@@ -39,6 +39,7 @@ class MyProfileFagment : Fragment () {
             val myIntent = Intent(requireContext(), EditNicknameActivity::class.java)
             startActivityForResult(myIntent, REQ_CODE_NICKNAME)
 
+
         }
 
     }
@@ -51,7 +52,7 @@ class MyProfileFagment : Fragment () {
         super.onActivityResult(requestCode, resultCode, data)
 
         if(requestCode == REQ_CODE_NICKNAME){
-            if(requestCode == Activity.RESULT_OK) {
+            if(resultCode == Activity.RESULT_OK) {
                 val nickname = data!!.getStringExtra("nick")
                 txtNickname.text = nickname
             }
