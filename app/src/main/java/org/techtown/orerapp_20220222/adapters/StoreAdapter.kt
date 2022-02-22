@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.willy.ratingbar.ScaleRatingBar
 import org.techtown.orerapp_20220222.R
 import org.techtown.orerapp_20220222.datas.StoreData
@@ -33,6 +34,7 @@ class StoreAdapter(
         val ratingBar = row.findViewById<ScaleRatingBar>(R.id.ratingBar)
 
         txtStoreName.text = data.name
+        Glide.with(mContext).load(data.logoImageUrl).into(imgLogo)
 
         return row
     }
